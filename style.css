@@ -310,4 +310,8 @@ header .btn {
 header .btn:hover {
     background: #e67e00;
 }
+/* Центрирование кнопки в шапке */
+header {
+    text-align: center;
+}
 
