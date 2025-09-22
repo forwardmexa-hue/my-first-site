@@ -99,3 +99,34 @@ body {
 .project-card:hover .overlay {
   opacity: 1;
 }
+.projects {
+  background: rgba(0, 0, 0, 0.6); /* такой же фон, как в "О нас" */
+  color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 1000px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.projects h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.project-gallery img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease;
+}
+
+.project-gallery img:hover {
+  transform: scale(1.05);
+}
