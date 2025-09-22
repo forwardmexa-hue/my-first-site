@@ -6,20 +6,38 @@
   <title>Мой сайт</title>
   <link rel="stylesheet" href="style.css">
 </head>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const fadeElements = document.querySelectorAll(".fade-in");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    fadeElements.forEach(el => observer.observe(el));
+  });
+</script>
+
 <body>
   <div class="overlay">
-    <h1>Архитектура и Дизайн</h1>
+   <h1 class="main-title fade-in">ZODA Construction — архитектура и строительство</h1>
+
     <p>Строим будущее вместе с вами</p>
-    <a href="https://t.me/MEKHRDOD" target="_blank" class="btn">Написать в Telegram</a>
+    <a href="https://t.me/zodaconstruction" target="_blank" class="btn">Написать в Telegram</a>
   </div>
 
-  <section class="about">
+  <section class="about fade-in">
   <h2>О нас</h2>
   <p>
     Мы — команда профессионалов в области архитектуры, дизайна и строительства. 
     Создаём современные и функциональные проекты, вдохновляясь гармонией формы и содержания.
   </p>
-  <a href="https://t.me/forwardmexa" class="btn">Связаться с нами</a>
+  <a href="https://t.me/Zodaconstruction" class="btn">Связаться с нами</a>
 </section>
 
 
