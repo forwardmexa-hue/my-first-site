@@ -24,9 +24,65 @@
     fadeElements.forEach(el => observer.observe(el));
   });
 </script>
+<script>
+  const steps = document.querySelectorAll('.funnel-step');
+
+  function showStepsOnScroll() {
+    const triggerBottom = window.innerHeight * 0.85;
+
+    steps.forEach(step => {
+      const stepTop = step.getBoundingClientRect().top;
+
+      if(stepTop < triggerBottom) {
+        step.classList.add('visible');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', showStepsOnScroll);
+  window.addEventListener('load', showStepsOnScroll);
+</script>
 
 <body>
  <header>
+  <section class="sales-funnel">
+
+  <!-- Этап 1: Приветствие -->
+  <div class="funnel-step">
+    <h2>Хотите строить с нами?</h2>
+    <p>Мы проектируем и возводим здания, которые вдохновляют.</p>
+    <a href="https://t.me/zodaconstruction" class="btn">Связаться через Telegram</a>
+  </div>
+
+  <!-- Этап 2: Показ проектов -->
+  <div class="funnel-step">
+    <h2>Наши работы</h2>
+    <div class="projects">
+      <img src="images/project1.jpg" alt="Проект 1">
+      <img src="images/project2.jpg" alt="Проект 2">
+      <img src="images/project3.jpg" alt="Проект 3">
+      <img src="images/project4.jpg" alt="Проект 4">
+    </div>
+  </div>
+
+  <!-- Этап 3: Услуги -->
+  <div class="funnel-step">
+    <h2>Наши услуги</h2>
+    <ul>
+      <li>Архитектурное проектирование</li>
+      <li>Строительство и реконструкция</li>
+      <li>Дизайн интерьеров и экстерьеров</li>
+    </ul>
+  </div>
+
+  <!-- Этап 4: Кнопка действия -->
+  <div class="funnel-step">
+    <h2>Готовы обсудить ваш проект?</h2>
+    <a href="https://t.me/zodaconstruction" class="btn">Связаться через Telegram</a>
+  </div>
+
+</section>
+
   <h1>Zoda Construction</h1>
   <p class="subtitle">Строим будущее вместе с вами</p>
   <a href="https://t.me/zodaconstruction" class="btn">Написать в Telegram</a>
