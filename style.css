@@ -1,3 +1,15 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+
+  /* фон */
+  background-image: url("./images/building-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 /* --- О нас --- */
 .about {
   padding: 60px 20px;
