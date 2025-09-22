@@ -227,4 +227,42 @@ body {
     background: linear-gradient(135deg, #005fcc, #0094cc);
     transform: translateY(-2px);
 }
+.hero {
+    text-align: center; /* центрируем всё внутри */
+    margin-top: 50px;
+}
+
+.main-title {
+    font-size: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-size: 22px;
+    font-weight: 500;
+    color: #444;
+    font-style: italic;
+    margin-bottom: 25px;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    background: linear-gradient(135deg, #0066cc, #004080);
+    color: white;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #004080, #0066cc);
+    transform: scale(1.05);
+}
 
