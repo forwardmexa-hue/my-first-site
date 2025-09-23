@@ -1,4 +1,4 @@
-/* Сброс стилей */
+/* Сброс */
 * {
   margin: 0;
   padding: 0;
@@ -43,12 +43,19 @@ header {
   color: white;
   text-decoration: none;
   font-size: 16px;
-  white-space: nowrap;
   transition: color 0.3s;
 }
 
 .nav-links a:hover {
   color: #f39c12;
+}
+
+/* Бургер */
+.burger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
 }
 
 /* Герой-секция */
@@ -146,3 +153,27 @@ footer {
   background: rgba(0, 0, 0, 0.6);
   font-size: 14px;
 }
+
+/* --- Адаптив --- */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    width: 200px;
+    text-align: right;
+    padding: 20px;
+    display: none;
+  }
+
+  .nav-links.nav-active {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+

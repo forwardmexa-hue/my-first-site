@@ -10,11 +10,12 @@
   <!-- Шапка -->
   <header>
     <div class="logo">Zoda Construction</div>
-    <nav class="nav-links">
+    <nav class="nav-links" id="navLinks">
       <a href="#about">О нас</a>
       <a href="#projects">Проекты</a>
       <a href="#contact">Контакты</a>
     </nav>
+    <div class="burger" id="burger">&#9776;</div>
   </header>
 
   <!-- Главный экран -->
@@ -55,6 +56,16 @@
   <footer>
     <p>© 2025 Zoda Construction. Все права защищены.</p>
   </footer>
+
+  <!-- Скрипт для бургера -->
+  <script>
+    const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('navLinks');
+
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('nav-active');
+    });
+  </script>
 </body>
 </html>
 
