@@ -2,7 +2,8 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #121212;
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
   color: white;
   line-height: 1.6;
 }
@@ -12,16 +13,17 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
+  padding: 15px 25px; /* уменьшил паддинги */
   background: rgba(0, 0, 0, 0.8);
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
+  box-sizing: border-box;
 }
 
 .logo {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
   color: white;
   white-space: nowrap;
@@ -29,13 +31,13 @@ body {
 
 .nav-links {
   display: flex;
-  gap: 20px;
+  gap: 15px; /* уменьшил расстояние */
 }
 
 .nav-links a {
   color: white;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 15px; /* уменьшил размер */
   white-space: nowrap;
   transition: color 0.3s;
 }
@@ -53,12 +55,14 @@ body {
   align-items: center;
   text-align: center;
   padding: 0 20px;
+  background: rgba(0, 0, 0, 0.6); /* затемнение для текста */
 }
 
 .hero h1 {
   font-size: 42px;
   color: white;
   margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(0,0,0,0.8);
 }
 
 .btn {
@@ -78,10 +82,13 @@ body {
   background: #d4ac0d;
 }
 
-/* Блок "О нас" */
+/* Блоки */
 .about, .projects, .contacts {
   padding: 80px 20px;
   text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  margin: 40px 0;
+  border-radius: 10px;
 }
 
 .about h2, .projects h2, .contacts h2 {
@@ -90,7 +97,7 @@ body {
   color: #f1c40f;
 }
 
-/* Карточки проектов */
+/* Проекты */
 .project-cards {
   display: flex;
   justify-content: center;
