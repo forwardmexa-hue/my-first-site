@@ -1,125 +1,61 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Мой сайт</title>
+  <title>Zoda Construction</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const fadeElements = document.querySelectorAll(".fade-in");
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.2 });
-
-    fadeElements.forEach(el => observer.observe(el));
-  });
-</script>
-<script>
-  const steps = document.querySelectorAll('.funnel-step');
-
-  function showStepsOnScroll() {
-    const triggerBottom = window.innerHeight * 0.85;
-
-    steps.forEach(step => {
-      const stepTop = step.getBoundingClientRect().top;
-
-      if(stepTop < triggerBottom) {
-        step.classList.add('visible');
-      }
-    });
-  }
-
-  window.addEventListener('scroll', showStepsOnScroll);
-  window.addEventListener('load', showStepsOnScroll);
-</script>
-
 <body>
- <header>
-  <section class="sales-funnel">
 
-  <!-- Этап 1: Приветствие -->
-  <div class="funnel-step">
-    <h2>Хотите строить с нами?</h2>
-    <p>Мы проектируем и возводим здания, которые вдохновляют.</p>
-    <a href="https://t.me/zodaconstruction" class="btn">Связаться через Telegram</a>
-  </div>
+  <!-- Навигация -->
+  <header>
+    <div class="logo">Zoda Construction</div>
+    <nav>
+      <ul>
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#projects">Наши проекты</a></li>
+        <li><a href="#contact">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- Этап 2: Показ проектов -->
-  <div class="funnel-step">
-    <h2>Наши работы</h2>
-    <div class="projects">
+  <!-- Главный экран -->
+  <section class="hero">
+    <h1>Строим будущее вместе с вами</h1>
+    <a href="https://t.me/zodaconstruction" target="_blank" class="btn">Написать в Telegram</a>
+  </section>
+
+  <!-- О нас -->
+  <section id="about" class="about">
+    <h2>О нас</h2>
+    <p>Компания <strong>Zoda Construction</strong> специализируется на архитектуре, дизайне и строительстве.
+       Мы создаём современные и надёжные проекты для вашего бизнеса и дома.</p>
+    <a href="https://t.me/zodaconstruction" target="_blank" class="btn">Связаться с нами</a>
+  </section>
+
+  <!-- Наши проекты -->
+  <section id="projects" class="projects">
+    <h2>Наши проекты</h2>
+    <div class="gallery">
       <img src="images/project1.jpg" alt="Проект 1">
       <img src="images/project2.jpg" alt="Проект 2">
       <img src="images/project3.jpg" alt="Проект 3">
       <img src="images/project4.jpg" alt="Проект 4">
     </div>
-  </div>
+  </section>
 
-  <!-- Этап 3: Услуги -->
-  <div class="funnel-step">
-    <h2>Наши услуги</h2>
-    <ul>
-      <li>Архитектурное проектирование</li>
-      <li>Строительство и реконструкция</li>
-      <li>Дизайн интерьеров и экстерьеров</li>
-    </ul>
-  </div>
+  <!-- Контакты -->
+  <section id="contact" class="contact">
+    <h2>Контакты</h2>
+    <p>Свяжитесь с нами для консультации и обсуждения вашего проекта.</p>
+    <a href="https://t.me/zodaconstruction" target="_blank" class="btn">Написать в Telegram</a>
+  </section>
 
-  <!-- Этап 4: Кнопка действия -->
-  <div class="funnel-step">
-    <h2>Готовы обсудить ваш проект?</h2>
-    <a href="https://t.me/zodaconstruction" class="btn">Связаться через Telegram</a>
-  </div>
+  <footer>
+    <p>© 2025 Zoda Construction. Все права защищены.</p>
+  </footer>
 
-</section>
-
-  <h1>Zoda Construction</h1>
-  <p class="subtitle">Строим будущее вместе с вами</p>
-  <a href="https://t.me/zodaconstruction" class="btn">Написать в Telegram</a>
-</header>
-
-
-
-  <section class="about fade-in">
-  <h2>О нас</h2>
-  <p>
-    Мы — команда профессионалов в области архитектуры, дизайна и строительства. 
-    Создаём современные и функциональные проекты, вдохновляясь гармонией формы и содержания.
-  </p>
-  <a href="https://t.me/Zodaconstruction" class="btn">Связаться с нами</a>
-</section>
-
-
-<!-- Наши проекты -->
-<section id="projects" class="projects">
-  <h2>Наши проекты</h2>
-  <div class="project-grid">
-    <div class="project-card">
-      <img src="images/project1.jpg" alt="Проект 1">
-      <div class="overlay">Проект 1</div>
-    </div>
-    <div class="project-card">
-      <img src="images/project2.jpg" alt="Проект 2">
-      <div class="overlay">Проект 2</div>
-    </div>
-    <div class="project-card">
-      <img src="images/project3.jpg" alt="Проект 3">
-      <div class="overlay">Проект 3</div>
-    </div>
-    <div class="project-card">
-      <img src="images/project4.jpg" alt="Проект 4">
-      <div class="overlay">Проект 4</div>
-    </div>
-  </div>
-</section>
+</body>
+</html>
 
